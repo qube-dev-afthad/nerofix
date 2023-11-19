@@ -41,6 +41,8 @@ dependencies:
   permission_handler: ^11.0.1
   carousel_slider: any
   qr_code_scanner: ^1.0.1
+  shimmer: ^2.0.0
+  youtube_player_iframe: ^4.0.4
 
 
 

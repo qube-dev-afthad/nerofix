@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nerofix/constants/app_assets.dart';
 import 'package:nerofix/constants/app_colors.dart';
+import 'package:nerofix/controllers/dashboard_controller.dart';
 import 'package:nerofix/routes/app_routes.dart';
+import 'package:nerofix/utils/app_essentials.dart';
 import 'package:nerofix/widgets/common_widgets.dart';
 
-class DashboardLeaderBoard extends StatelessWidget {
+class DashboardLeaderBoard extends GetView<DashboardController> {
   const DashboardLeaderBoard({super.key});
 
   @override
@@ -13,7 +15,8 @@ class DashboardLeaderBoard extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10).copyWith(right: 0),
+          padding:
+              const EdgeInsets.symmetric(horizontal: 20).copyWith(right: 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -40,22 +43,22 @@ class DashboardLeaderBoard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             _crownWidget(
-                city: 'Mumbai',
-                name: 'Harikrishnan s',
-                points: '800',
+                city: controller.leaderBoard[1].city.toString(),
+                name: controller.leaderBoard[1].name.toString(),
+                points: controller.leaderBoard[1].earningPoint.toString(),
                 type: 'silver'),
             Padding(
               padding: const EdgeInsets.only(bottom: 30),
               child: _crownWidget(
-                  city: 'Mumbai',
-                  name: 'Harikrishnan s',
-                  points: '800',
+                  city: controller.leaderBoard[0].city.toString(),
+                  name: controller.leaderBoard[0].name.toString(),
+                  points: controller.leaderBoard[0].earningPoint.toString(),
                   type: 'gold'),
             ),
             _crownWidget(
-                city: 'Mumbai',
-                name: 'Harikrishnan s',
-                points: '800',
+                city: controller.leaderBoard[2].city.toString(),
+                name: controller.leaderBoard[2].name.toString(),
+                points: controller.leaderBoard[2].earningPoint.toString(),
                 type: 'platinum'),
           ],
         )
@@ -69,29 +72,36 @@ class DashboardLeaderBoard extends StatelessWidget {
       required String type,
       required String city}) {
     return Container(
-
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: AppColors.leaderBoardCardColor,),
-      
+      width: 95,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: AppColors.leaderBoardCardColor,
+      ),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            if (type == 'gold') _imageContainer(gold, 'HK', 'gold'),
-            if (type == 'silver') _imageContainer(silver, 'HK', 'silver'),
-            if (type == 'platinum') _imageContainer(platinum, 'HK', 'platinum'),
-            const RegularText(
-              text: '650',
+            if (type == 'gold')
+              _imageContainer(gold, name, 'gold'),
+            if (type == 'silver')
+              _imageContainer(
+                  silver, name, 'silver'),
+            if (type == 'platinum')
+              _imageContainer(
+                  platinum, name, 'platinum'),
+            RegularText(
+              text: points,
               color: AppColors.scoreColorYellow,
               fontSize: 12,
               fontWeight: FontWeight.w700,
             ),
-            const RegularText(
-              text: 'Harikrishanan\nAnand',
+            RegularText(
+              text:AppEssential.splitFirstTwoWords(name) ,
               fontSize: 12,
               fontWeight: FontWeight.w700,
             ),
-            const RegularText(
-              text: 'Mumbai',
+            RegularText(
+              text: city,
               fontSize: 8,
               fontWeight: FontWeight.w400,
             ),
@@ -105,17 +115,17 @@ class DashboardLeaderBoard extends StatelessWidget {
     return Container(
       height: 60,
       width: 60,
+      decoration:
+          BoxDecoration(image: DecorationImage(image: AssetImage(image))),
       child: Center(
           child: Padding(
         padding: EdgeInsets.only(bottom: type == 'gold' ? 0 : 20),
         child: RegularText(
-          text: text,
+          text: AppEssential.getFirstLetters(text),
           fontSize: 22,
           fontWeight: FontWeight.w700,
         ),
       )),
-      decoration:
-          BoxDecoration(image: DecorationImage(image: AssetImage(image))),
     );
   }
 }

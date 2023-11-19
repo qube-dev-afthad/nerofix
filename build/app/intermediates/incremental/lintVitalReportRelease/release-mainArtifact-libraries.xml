@@ -1,13 +1,13 @@
 <libraries>
   <library
-      name="__local_aars__:/Users/muhammedafthad/NEROFIX/nerofix/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/app/intermediates/flutter/release/libs.jar"
-      resolved="__local_aars__:/Users/muhammedafthad/NEROFIX/nerofix/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
+      name="__local_aars__:/Users/muhammedafthad/nerofix-1/build/app/intermediates/flutter/release/libs.jar:unspecified@jar"
+      jars="/Users/muhammedafthad/nerofix-1/build/app/intermediates/flutter/release/libs.jar"
+      resolved="__local_aars__:/Users/muhammedafthad/nerofix-1/build/app/intermediates/flutter/release/libs.jar:unspecified"/>
   <library
-      name="/Users/muhammedafthad/NEROFIX/nerofix/android@@:permission_handler_android::release"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/permission_handler_android/.transforms/28d5a3b1e894e1b069ef64e800558f44/transformed/out/jars/classes.jar"
+      name="/Users/muhammedafthad/nerofix-1/android@@:permission_handler_android::release"
+      jars="/Users/muhammedafthad/nerofix-1/build/permission_handler_android/.transforms/78749e1089579502b0705d65a297b9d0/transformed/out/jars/classes.jar"
       resolved="com.baseflow.permissionhandler:permission_handler_android:unspecified"
-      folder="/Users/muhammedafthad/NEROFIX/nerofix/build/permission_handler_android/.transforms/28d5a3b1e894e1b069ef64e800558f44/transformed/out"
+      folder="/Users/muhammedafthad/nerofix-1/build/permission_handler_android/.transforms/78749e1089579502b0705d65a297b9d0/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -17,10 +17,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/Users/muhammedafthad/NEROFIX/nerofix/android@@:geolocator_android::release"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/geolocator_android/.transforms/8107dcdac9078f92ade13b6c716b1ad2/transformed/out/jars/classes.jar"
+      name="/Users/muhammedafthad/nerofix-1/android@@:geolocator_android::release"
+      jars="/Users/muhammedafthad/nerofix-1/build/geolocator_android/.transforms/ca4792f086a61a410aed08cae6bdc775/transformed/out/jars/classes.jar"
       resolved="com.baseflow.geolocator:geolocator_android:unspecified"
-      folder="/Users/muhammedafthad/NEROFIX/nerofix/build/geolocator_android/.transforms/8107dcdac9078f92ade13b6c716b1ad2/transformed/out"
+      folder="/Users/muhammedafthad/nerofix-1/build/geolocator_android/.transforms/ca4792f086a61a410aed08cae6bdc775/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -30,10 +30,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/Users/muhammedafthad/NEROFIX/nerofix/android@@:flutter_plugin_android_lifecycle::release"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/flutter_plugin_android_lifecycle/.transforms/07a18851f7ace361527ee61089d21351/transformed/out/jars/classes.jar"
+      name="/Users/muhammedafthad/nerofix-1/android@@:flutter_plugin_android_lifecycle::release"
+      jars="/Users/muhammedafthad/nerofix-1/build/flutter_plugin_android_lifecycle/.transforms/6fdb5053aa5865c3a49e80029f0afafb/transformed/out/jars/classes.jar"
       resolved="io.flutter.plugins.flutter_plugin_android_lifecycle:flutter_plugin_android_lifecycle:unspecified"
-      folder="/Users/muhammedafthad/NEROFIX/nerofix/build/flutter_plugin_android_lifecycle/.transforms/07a18851f7ace361527ee61089d21351/transformed/out"
+      folder="/Users/muhammedafthad/nerofix-1/build/flutter_plugin_android_lifecycle/.transforms/6fdb5053aa5865c3a49e80029f0afafb/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -43,10 +43,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/Users/muhammedafthad/NEROFIX/nerofix/android@@:geocoding_android::release"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/geocoding_android/.transforms/fa17bbd622c5f64d5441b94e9b51bd30/transformed/out/jars/classes.jar"
+      name="/Users/muhammedafthad/nerofix-1/android@@:geocoding_android::release"
+      jars="/Users/muhammedafthad/nerofix-1/build/geocoding_android/.transforms/35cdf6bbf8b471a5a7e5d08e8d3fb644/transformed/out/jars/classes.jar"
       resolved="com.baseflow.geocoding:geocoding_android:unspecified"
-      folder="/Users/muhammedafthad/NEROFIX/nerofix/build/geocoding_android/.transforms/fa17bbd622c5f64d5441b94e9b51bd30/transformed/out"
+      folder="/Users/muhammedafthad/nerofix-1/build/geocoding_android/.transforms/35cdf6bbf8b471a5a7e5d08e8d3fb644/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -56,10 +56,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/Users/muhammedafthad/NEROFIX/nerofix/android@@:camera_android::release"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/camera_android/.transforms/629f2ea0a9fba99671a2840b8166f6f9/transformed/out/jars/classes.jar"
+      name="/Users/muhammedafthad/nerofix-1/android@@:camera_android::release"
+      jars="/Users/muhammedafthad/nerofix-1/build/camera_android/.transforms/1908d4cf605be0f52765512f3be367c2/transformed/out/jars/classes.jar"
       resolved="io.flutter.plugins.camera:camera_android:unspecified"
-      folder="/Users/muhammedafthad/NEROFIX/nerofix/build/camera_android/.transforms/629f2ea0a9fba99671a2840b8166f6f9/transformed/out"
+      folder="/Users/muhammedafthad/nerofix-1/build/camera_android/.transforms/1908d4cf605be0f52765512f3be367c2/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -69,10 +69,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/Users/muhammedafthad/NEROFIX/nerofix/android@@:url_launcher_android::release"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/url_launcher_android/.transforms/29b0de5e988845d25b8892b03cee3524/transformed/out/jars/classes.jar"
+      name="/Users/muhammedafthad/nerofix-1/android@@:url_launcher_android::release"
+      jars="/Users/muhammedafthad/nerofix-1/build/url_launcher_android/.transforms/499637f0b3672eecde39d59d7598229a/transformed/out/jars/classes.jar"
       resolved="io.flutter.plugins.urllauncher:url_launcher_android:unspecified"
-      folder="/Users/muhammedafthad/NEROFIX/nerofix/build/url_launcher_android/.transforms/29b0de5e988845d25b8892b03cee3524/transformed/out"
+      folder="/Users/muhammedafthad/nerofix-1/build/url_launcher_android/.transforms/499637f0b3672eecde39d59d7598229a/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -82,10 +82,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/Users/muhammedafthad/NEROFIX/nerofix/android@@:path_provider_android::release"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/path_provider_android/.transforms/e56ac50c082af7fa524ed32830be1127/transformed/out/jars/classes.jar"
+      name="/Users/muhammedafthad/nerofix-1/android@@:path_provider_android::release"
+      jars="/Users/muhammedafthad/nerofix-1/build/path_provider_android/.transforms/2c9958dabba938413cea2c4487115c88/transformed/out/jars/classes.jar"
       resolved="io.flutter.plugins.pathprovider:path_provider_android:unspecified"
-      folder="/Users/muhammedafthad/NEROFIX/nerofix/build/path_provider_android/.transforms/e56ac50c082af7fa524ed32830be1127/transformed/out"
+      folder="/Users/muhammedafthad/nerofix-1/build/path_provider_android/.transforms/2c9958dabba938413cea2c4487115c88/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -95,10 +95,10 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
-      name="/Users/muhammedafthad/NEROFIX/nerofix/android@@:qr_code_scanner::release"
-      jars="/Users/muhammedafthad/NEROFIX/nerofix/build/qr_code_scanner/.transforms/085256fc4f9a51b8a7692abcecae2e7e/transformed/out/jars/classes.jar"
+      name="/Users/muhammedafthad/nerofix-1/android@@:qr_code_scanner::release"
+      jars="/Users/muhammedafthad/nerofix-1/build/qr_code_scanner/.transforms/d9b2ad0a21cec3478d238b88e1b8ae53/transformed/out/jars/classes.jar"
       resolved="net.touchcapture.qr.flutterqr:qr_code_scanner:unspecified"
-      folder="/Users/muhammedafthad/NEROFIX/nerofix/build/qr_code_scanner/.transforms/085256fc4f9a51b8a7692abcecae2e7e/transformed/out"
+      folder="/Users/muhammedafthad/nerofix-1/build/qr_code_scanner/.transforms/d9b2ad0a21cec3478d238b88e1b8ae53/transformed/out"
       manifest="AndroidManifest.xml"
       resFolder="res"
       assetsFolder="assets"
@@ -154,17 +154,9 @@
       jars="/Users/muhammedafthad/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.8.22/4dabb8248310d833bb6a8b516024a91fd3d275c/kotlin-stdlib-jdk7-1.8.22.jar"
       resolved="org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22"/>
   <library
-      name="io.flutter:armeabi_v7a_release:1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad@jar"
-      jars="/Users/muhammedafthad/.gradle/caches/modules-2/files-2.1/io.flutter/armeabi_v7a_release/1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad/21a5cb43a402726a8905d8797620c22372dec458/armeabi_v7a_release-1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad.jar"
-      resolved="io.flutter:armeabi_v7a_release:1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"/>
-  <library
       name="io.flutter:arm64_v8a_release:1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad@jar"
       jars="/Users/muhammedafthad/.gradle/caches/modules-2/files-2.1/io.flutter/arm64_v8a_release/1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad/db8660f2824f104d8a5f9de2f25c4647e7cfa790/arm64_v8a_release-1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad.jar"
       resolved="io.flutter:arm64_v8a_release:1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"/>
-  <library
-      name="io.flutter:x86_64_release:1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad@jar"
-      jars="/Users/muhammedafthad/.gradle/caches/modules-2/files-2.1/io.flutter/x86_64_release/1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad/be3ac06bf6d8e55353584aae8be4a8d04881fd79/x86_64_release-1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad.jar"
-      resolved="io.flutter:x86_64_release:1.0.0-0545f8705df301877d787107bac1a6e9fc9ee1ad"/>
   <library
       name="androidx.lifecycle:lifecycle-common-java8:2.4.0@jar"
       jars="/Users/muhammedafthad/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.4.0/5b8f86fea035328fc9e8c660773037a3401ce25f/lifecycle-common-java8-2.4.0.jar"

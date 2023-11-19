@@ -1,3 +1,5 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nerofix/constants/app_assets.dart';
@@ -9,10 +11,12 @@ class DashboardHeader extends StatelessWidget {
   final VoidCallback? onTap;
   final String points;
   final String name;
+  final String memberType;
   final bool hideTrailing;
   const DashboardHeader(
       {super.key,
       this.onTap,
+      required this.memberType,
       required this.name,
       required this.points,
       this.hideTrailing = false});
@@ -23,8 +27,12 @@ class DashboardHeader extends StatelessWidget {
       children: [
         Container(
           height: 300,
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage(platinumBannerBg),fit: BoxFit.fill)),
-         
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+            begin: Alignment(0.00, -1.00),
+            end: Alignment(0, 1),
+            colors: getMemberConfig(memberType).gradients,
+          )),
           child: Stack(
             children: [
               Positioned(
@@ -32,7 +40,7 @@ class DashboardHeader extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(24.0),
                   child: Image.asset(
-                    platinumBanner,
+                    getMemberConfig(memberType).memberBanner,
                     height: 200,
                     width: Get.width - 50,
                   ),
@@ -84,7 +92,8 @@ class DashboardHeader extends StatelessWidget {
         title: Row(
           children: [
             RegularText(
-              text:AppEssential.parseCurrency(points,withoutLeading: true).toString() ,
+              text: AppEssential.parseCurrency(points, withoutLeading: true)
+                  .toString(),
               textAlign: TextAlign.start,
               color: Colors.white,
               fontSize: 40,
@@ -113,13 +122,56 @@ class DashboardHeader extends StatelessWidget {
       ),
     );
   }
-  // Row(
-  //       children: [
-  //         Column(
-  //           children: [
 
-  //           ],
-  //         )
-  //       ],
-  //     ),
+  MemberType getMemberConfig(String memberType) {
+    switch (memberType) {
+      case 'bronze':
+        return MemberType(
+            memberBanner: bronzeBanner,
+            gradients: [Colors.yellow, Colors.amber]);
+      case 'platinum':
+        return MemberType(
+            memberBanner: platinumBanner,
+            gradients: [Colors.yellow, Colors.amber]);
+      case 'gold':
+        return MemberType(memberBanner: goldBanner, gradients: [
+          Color(0xFF818181),
+          Color(0xFFF3E7FD),
+          Color(0x00CCCCCC)
+        ]);
+      case 'silver':
+        return MemberType(
+            memberBanner: silverBanner,
+            gradients: [Colors.yellow, Colors.amber]);
+
+      default:
+        return MemberType(
+            memberBanner: bronzeBanner,
+            gradients: [Colors.yellow, Colors.amber]);
+    }
+  }
+}
+
+class MemberType {
+  String memberBanner;
+  List<Color> gradients;
+  MemberType({
+    required this.memberBanner,
+    required this.gradients,
+  });
+
+  @override
+  String toString() =>
+      'MemberType(memberBanner: $memberBanner, gradients: $gradients)';
+
+  @override
+  bool operator ==(covariant MemberType other) {
+    if (identical(this, other)) return true;
+
+    return other.memberBanner == memberBanner &&
+        listEquals(other.gradients, gradients);
+  }
+
+  @override
+  int get hashCode => memberBanner.hashCode ^ gradients.hashCode;
 }

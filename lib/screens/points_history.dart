@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nerofix/constants/app_assets.dart';
 import 'package:nerofix/constants/app_colors.dart';
+import 'package:nerofix/controllers/dashboard_controller.dart';
 import 'package:nerofix/widgets/common_widgets.dart';
 import 'package:nerofix/widgets/dashboard_header.dart';
 import 'package:nerofix/widgets/transaction_history.dart';
 
-class PointsHistory extends StatelessWidget {
+class PointsHistory extends GetView<DashboardController> {
   const PointsHistory({super.key});
 
   @override
@@ -15,8 +17,9 @@ class PointsHistory extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(children: [
             DashboardHeader(
-              name: 'name',
-              points: '666',
+              memberType: controller.points!.memberType,
+              name: controller.points!.name,
+              points: controller.points!.balancePts,
               hideTrailing: true,
             ),
             Column(

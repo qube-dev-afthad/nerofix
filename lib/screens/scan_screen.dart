@@ -25,7 +25,7 @@ class _ScanCouponState extends State<ScanCoupon> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.black.withOpacity(0.4000000059604645),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -35,12 +35,7 @@ class _ScanCouponState extends State<ScanCoupon> {
               child: Stack(
                 alignment: Alignment.center,
                 children: <Widget>[
-                  Image.asset(
-                    scanBg,
-                    height: Get.height,
-                    width: Get.width,
-                    fit: BoxFit.cover,
-                  ),
+                  
                   Positioned(
                     bottom: 450,
                     child: SizedBox(
@@ -124,11 +119,11 @@ class _ScanCouponState extends State<ScanCoupon> {
     scanController.qrViewController = controller;
     controller.scannedDataStream.listen((scanData) async {
       lastScanData = scanData.code;
-      if (scanData.format == BarcodeFormat.qrcode) {
+     // if (scanData.format == BarcodeFormat.code128) {
         scanController.data.value = scanData.code!;
         controller.pauseCamera();
         await scanController.extractData();
-      }
+     // }
     });
   }
 

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.nerofix.app-mergeDebugResources-23:/values-es-rUS/values-es-rUS.xml",
+            "outputFile": "com.example.nerofix.app-mergeDebugResources-24:/values-es-rUS/values-es-rUS.xml",
             "map": [
                 {
                     "source": "/Users/muhammedafthad/.gradle/caches/transforms-3/771fe64efcfbbf39a8b9ff2c8e0c6eec/transformed/browser-1.5.0/res/values-es-rUS/values-es-rUS.xml",

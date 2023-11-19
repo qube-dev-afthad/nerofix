@@ -6,34 +6,34 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml
+8-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml
+9-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-11-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:3:5-79
-11-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:3:22-76
+11-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:3:5-79
+11-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:3:22-76
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:4:2-64
-12-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:4:19-61
+12-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:4:2-64
+12-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:4:19-61
 13    <uses-permission android:name="android.permission.CAMERA" />
-13-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:5:2-62
-13-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:5:19-59
+13-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:5:2-62
+13-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:5:19-59
 14    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-14-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:6:2-78
-14-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:6:19-75
+14-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:6:2-78
+14-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:6:19-75
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:7:2-77
-15-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:7:19-74
+15-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:7:2-77
+15-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:7:19-74
 16    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-16-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:8:3-79
-16-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:8:20-76
+16-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:8:3-79
+16-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:8:20-76
 17    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-17-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:9:2-76
-17-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:9:19-73
+17-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:9:2-76
+17-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:9:19-73
 18    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-18-->[:camera_android] /Users/muhammedafthad/NEROFIX/nerofix/build/camera_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-71
-18-->[:camera_android] /Users/muhammedafthad/NEROFIX/nerofix/build/camera_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-68
+18-->[:camera_android] /Users/muhammedafthad/nerofix-1/build/camera_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-71
+18-->[:camera_android] /Users/muhammedafthad/nerofix-1/build/camera_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-68
 19
 20    <permission
 20-->[androidx.core:core:1.10.1] /Users/muhammedafthad/.gradle/caches/transforms-3/9c9ab1a476c120097a79d748cec7161f/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
@@ -85,29 +85,29 @@
 44
 45    <application
 46        android:name="android.app.Application"
-46-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:12:9-42
+46-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:12:9-42
 47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 47-->[androidx.core:core:1.10.1] /Users/muhammedafthad/.gradle/caches/transforms-3/9c9ab1a476c120097a79d748cec7161f/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
 48        android:icon="@mipmap/ic_launcher"
-48-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:13:9-43
+48-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:13:9-43
 49        android:label="nerofix" >
-49-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:11:9-32
+49-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:11:9-32
 50        <activity
-50-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:14:9-34:20
+50-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:14:9-34:20
 51            android:name="com.example.nerofix.MainActivity"
-51-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:15:13-41
+51-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:15:13-41
 52            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-52-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:19:13-163
+52-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:19:13-163
 53            android:exported="true"
-53-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:16:13-36
+53-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:16:13-36
 54            android:hardwareAccelerated="true"
-54-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:20:13-47
+54-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:20:13-47
 55            android:launchMode="singleTop"
-55-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:17:13-43
+55-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:17:13-43
 56            android:theme="@style/LaunchTheme"
-56-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:18:13-47
+56-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:18:13-47
 57            android:windowSoftInputMode="adjustResize" >
-57-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:21:13-55
+57-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:21:13-55
 58
 59            <!--
 60                 Specifies an Android theme to apply to this Activity as soon as
@@ -116,21 +116,21 @@
 63                 to determine the Window background behind the Flutter UI.
 64            -->
 65            <meta-data
-65-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:26:13-29:17
+65-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:26:13-29:17
 66                android:name="io.flutter.embedding.android.NormalTheme"
-66-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:27:15-70
+66-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:27:15-70
 67                android:resource="@style/NormalTheme" />
-67-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:28:15-52
+67-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:28:15-52
 68
 69            <intent-filter>
-69-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:30:13-33:29
+69-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:30:13-33:29
 70                <action android:name="android.intent.action.MAIN" />
-70-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:31:17-68
-70-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:31:25-66
+70-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:31:17-68
+70-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:31:25-66
 71
 72                <category android:name="android.intent.category.LAUNCHER" />
-72-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:32:17-76
-72-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:32:27-74
+72-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:32:17-76
+72-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:32:27-74
 73            </intent-filter>
 74        </activity>
 75        <!--
@@ -138,31 +138,31 @@
 77             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
 78        -->
 79        <meta-data
-79-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:37:9-39:33
+79-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:37:9-39:33
 80            android:name="flutterEmbedding"
-80-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:38:13-44
+80-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:38:13-44
 81            android:value="2" />
-81-->/Users/muhammedafthad/NEROFIX/nerofix/android/app/src/main/AndroidManifest.xml:39:13-30
+81-->/Users/muhammedafthad/nerofix-1/android/app/src/main/AndroidManifest.xml:39:13-30
 82
 83        <service
-83-->[:geolocator_android] /Users/muhammedafthad/NEROFIX/nerofix/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-14:56
+83-->[:geolocator_android] /Users/muhammedafthad/nerofix-1/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-14:56
 84            android:name="com.baseflow.geolocator.GeolocatorLocationService"
-84-->[:geolocator_android] /Users/muhammedafthad/NEROFIX/nerofix/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-77
+84-->[:geolocator_android] /Users/muhammedafthad/nerofix-1/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-77
 85            android:enabled="true"
-85-->[:geolocator_android] /Users/muhammedafthad/NEROFIX/nerofix/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-35
+85-->[:geolocator_android] /Users/muhammedafthad/nerofix-1/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-35
 86            android:exported="false"
-86-->[:geolocator_android] /Users/muhammedafthad/NEROFIX/nerofix/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-37
+86-->[:geolocator_android] /Users/muhammedafthad/nerofix-1/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-37
 87            android:foregroundServiceType="location" />
-87-->[:geolocator_android] /Users/muhammedafthad/NEROFIX/nerofix/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-53
+87-->[:geolocator_android] /Users/muhammedafthad/nerofix-1/build/geolocator_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-53
 88
 89        <activity
-89-->[:url_launcher_android] /Users/muhammedafthad/NEROFIX/nerofix/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-13:74
+89-->[:url_launcher_android] /Users/muhammedafthad/nerofix-1/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-13:74
 90            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-90-->[:url_launcher_android] /Users/muhammedafthad/NEROFIX/nerofix/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-74
+90-->[:url_launcher_android] /Users/muhammedafthad/nerofix-1/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-74
 91            android:exported="false"
-91-->[:url_launcher_android] /Users/muhammedafthad/NEROFIX/nerofix/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-37
+91-->[:url_launcher_android] /Users/muhammedafthad/nerofix-1/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-37
 92            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-92-->[:url_launcher_android] /Users/muhammedafthad/NEROFIX/nerofix/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-71
+92-->[:url_launcher_android] /Users/muhammedafthad/nerofix-1/build/url_launcher_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-71
 93
 94        <uses-library
 94-->[androidx.window:window:1.0.0-beta04] /Users/muhammedafthad/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40

@@ -4,9 +4,9 @@ com.baseflow.permissionhandler.permission_handler_android-jetified-annotation-ex
 com.baseflow.permissionhandler.permission_handler_android-jetified-window-1.0.0-beta04-3 /Users/muhammedafthad/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/res
 com.baseflow.permissionhandler.permission_handler_android-main-4 /Users/muhammedafthad/.pub-cache/hosted/pub.dev/permission_handler_android-11.1.0/android/src/main/res
 com.baseflow.permissionhandler.permission_handler_android-release-5 /Users/muhammedafthad/.pub-cache/hosted/pub.dev/permission_handler_android-11.1.0/android/src/release/res
-com.baseflow.permissionhandler.permission_handler_android-pngs-6 /Users/muhammedafthad/NEROFIX/nerofix/build/permission_handler_android/generated/res/pngs/release
-com.baseflow.permissionhandler.permission_handler_android-resValues-7 /Users/muhammedafthad/NEROFIX/nerofix/build/permission_handler_android/generated/res/resValues/release
-com.baseflow.permissionhandler.permission_handler_android-rs-8 /Users/muhammedafthad/NEROFIX/nerofix/build/permission_handler_android/generated/res/rs/release
-com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-9 /Users/muhammedafthad/NEROFIX/nerofix/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
-com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-10 /Users/muhammedafthad/NEROFIX/nerofix/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-com.baseflow.permissionhandler.permission_handler_android-merged_res-11 /Users/muhammedafthad/NEROFIX/nerofix/build/permission_handler_android/intermediates/merged_res/release
+com.baseflow.permissionhandler.permission_handler_android-pngs-6 /Users/muhammedafthad/nerofix-1/build/permission_handler_android/generated/res/pngs/release
+com.baseflow.permissionhandler.permission_handler_android-resValues-7 /Users/muhammedafthad/nerofix-1/build/permission_handler_android/generated/res/resValues/release
+com.baseflow.permissionhandler.permission_handler_android-rs-8 /Users/muhammedafthad/nerofix-1/build/permission_handler_android/generated/res/rs/release
+com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-9 /Users/muhammedafthad/nerofix-1/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
+com.baseflow.permissionhandler.permission_handler_android-mergeReleaseResources-10 /Users/muhammedafthad/nerofix-1/build/permission_handler_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+com.baseflow.permissionhandler.permission_handler_android-merged_res-11 /Users/muhammedafthad/nerofix-1/build/permission_handler_android/intermediates/merged_res/release

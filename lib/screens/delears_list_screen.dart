@@ -56,7 +56,7 @@ class DealersListScreenState extends State<DealersListScreen> {
               height: 50,
             ),
             const RegularText(
-              text: 'View Delears',
+              text: 'View Dealer',
               fontSize: 18,
               fontWeight: FontWeight.w700,
             ),

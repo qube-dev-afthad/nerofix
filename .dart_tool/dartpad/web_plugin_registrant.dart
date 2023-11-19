@@ -9,6 +9,7 @@
 import 'package:camera_web/camera_web.dart';
 import 'package:geolocator_web/geolocator_web.dart';
 import 'package:url_launcher_web/url_launcher_web.dart';
+import 'package:youtube_player_iframe_web/src/web_youtube_player_iframe_platform.dart';
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 void registerPlugins([final Registrar? pluginRegistrar]) {
@@ -16,5 +17,6 @@ void registerPlugins([final Registrar? pluginRegistrar]) {
   CameraPlugin.registerWith(registrar);
   GeolocatorPlugin.registerWith(registrar);
   UrlLauncherPlugin.registerWith(registrar);
+  WebYoutubePlayerIframePlatform.registerWith(registrar);
   registrar.registerMessageHandler();
 }

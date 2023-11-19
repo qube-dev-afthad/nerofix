@@ -17,3 +17,5 @@ const String platinumBannerBg = 'assets/images/platinum_banner_bg.png';
 const String banner = 'assets/images/banner.png';
 const String scanBg = 'assets/images/scan_bg.png';
 const String scanBd = 'assets/images/scan_bd.png';
+const String carpenter = 'assets/images/carpenter.png';
+const String youtube = 'assets/images/youtube.png';

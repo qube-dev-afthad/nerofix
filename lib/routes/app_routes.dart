@@ -1,5 +1,8 @@
 import 'package:get/get.dart';
 import 'package:nerofix/bindings/dasboard_bindings.dart';
+import 'package:nerofix/controllers/button_controller.dart';
+import 'package:nerofix/controllers/login_controller.dart';
+import 'package:nerofix/core/prefs.dart';
 import 'package:nerofix/screens/dashboard.dart';
 import 'package:nerofix/screens/delears_list_screen.dart';
 import 'package:nerofix/screens/leader_board.dart';
@@ -23,10 +26,13 @@ class Routes {
   static String scanCoupon = '/scanCoupon';
 }
 
-String intialRoutes = Routes.login;
+String intialRoutes = PrefsDb.getMobile == null ? Routes.login : Routes.home;
 //String intialRoute = PrefsDb.getToken != null ? Routes.testPage : Routes.login;
 final getPages = [
-  GetPage(name: Routes.login, page: () => const LoginScreen()),
+  GetPage(name: Routes.login, page: () => const LoginScreen(), bindings: [
+    BindingsBuilder.put(() => LoginController()),
+    BindingsBuilder.put(() => ButtonController())
+  ]),
   GetPage(name: Routes.verifyOtp, page: () => const VerifyOtp()),
   GetPage(
       name: Routes.home,
@@ -51,7 +57,5 @@ final getPages = [
       page: () => const DealersListScreen(),
       bindings: []),
   GetPage(
-      name: Routes.scanCoupon,
-      page: () => const ScanCoupon(),
-      bindings: []),
+      name: Routes.scanCoupon, page: () => const ScanCoupon(), bindings: []),
 ];

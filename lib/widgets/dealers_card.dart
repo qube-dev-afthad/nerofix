@@ -30,7 +30,7 @@ class DelearsCard extends StatelessWidget {
                 child: const Padding(
                   padding: const EdgeInsets.all(5.0),
                   child: RegularText(
-                    text: 'Top Delears',
+                    text: 'Top Dealers',
                     color: Colors.white,
                   ),
                 ),

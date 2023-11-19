@@ -45,11 +45,13 @@ MERGED from [:geocoding_android] /Users/muhammedafthad/nerofix-1/build/geocoding
 MERGED from [:url_launcher_android] /Users/muhammedafthad/nerofix-1/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-16:12
 MERGED from [:path_provider_android] /Users/muhammedafthad/nerofix-1/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:qr_code_scanner] /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:webview_flutter_android] /Users/muhammedafthad/nerofix-1/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/muhammedafthad/.gradle/caches/transforms-3/006d93cd422dbc43e89591147c2de572/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/muhammedafthad/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
 MERGED from [com.google.android.gms:play-services-location:21.0.1] /Users/muhammedafthad/.gradle/caches/transforms-3/eb987e8abddf2728baa9eff1d27123e6/transformed/jetified-play-services-location-21.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.browser:browser:1.5.0] /Users/muhammedafthad/.gradle/caches/transforms-3/771fe64efcfbbf39a8b9ff2c8e0c6eec/transformed/browser-1.5.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.4.2] /Users/muhammedafthad/.gradle/caches/transforms-3/6c400c0637cb2fea81e72115a5ff1a4e/transformed/appcompat-1.4.2/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.webkit:webkit:1.7.0] /Users/muhammedafthad/.gradle/caches/transforms-3/f72edb9be7830f1a26398a6f91d75b58/transformed/webkit-1.7.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/muhammedafthad/.gradle/caches/transforms-3/24bd5ae211488322aa8c48f41a7bee4d/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/muhammedafthad/.gradle/caches/transforms-3/02334ee9d093afcbcec94917848728eb/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/muhammedafthad/.gradle/caches/transforms-3/f46b9773282b7a3d38863a46e0e0b5d1/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
@@ -151,6 +153,8 @@ MERGED from [:path_provider_android] /Users/muhammedafthad/nerofix-1/build/path_
 MERGED from [:path_provider_android] /Users/muhammedafthad/nerofix-1/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:qr_code_scanner] /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-9:67
 MERGED from [:qr_code_scanner] /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/intermediates/merged_manifest/debug/AndroidManifest.xml:6:5-9:67
+MERGED from [:webview_flutter_android] /Users/muhammedafthad/nerofix-1/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] /Users/muhammedafthad/nerofix-1/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/muhammedafthad/.gradle/caches/transforms-3/006d93cd422dbc43e89591147c2de572/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/muhammedafthad/.gradle/caches/transforms-3/006d93cd422dbc43e89591147c2de572/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/muhammedafthad/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
@@ -161,6 +165,8 @@ MERGED from [androidx.browser:browser:1.5.0] /Users/muhammedafthad/.gradle/cache
 MERGED from [androidx.browser:browser:1.5.0] /Users/muhammedafthad/.gradle/caches/transforms-3/771fe64efcfbbf39a8b9ff2c8e0c6eec/transformed/browser-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.4.2] /Users/muhammedafthad/.gradle/caches/transforms-3/6c400c0637cb2fea81e72115a5ff1a4e/transformed/appcompat-1.4.2/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.2] /Users/muhammedafthad/.gradle/caches/transforms-3/6c400c0637cb2fea81e72115a5ff1a4e/transformed/appcompat-1.4.2/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.webkit:webkit:1.7.0] /Users/muhammedafthad/.gradle/caches/transforms-3/f72edb9be7830f1a26398a6f91d75b58/transformed/webkit-1.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.7.0] /Users/muhammedafthad/.gradle/caches/transforms-3/f72edb9be7830f1a26398a6f91d75b58/transformed/webkit-1.7.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/muhammedafthad/.gradle/caches/transforms-3/24bd5ae211488322aa8c48f41a7bee4d/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/muhammedafthad/.gradle/caches/transforms-3/24bd5ae211488322aa8c48f41a7bee4d/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
 MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/muhammedafthad/.gradle/caches/transforms-3/02334ee9d093afcbcec94917848728eb/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43

@@ -1,10 +1,13 @@
 import 'dart:async';
+import 'dart:developer' as dev;
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:nerofix/constants/api_endpoints.dart';
+import 'package:nerofix/core/prefs.dart';
 import 'package:nerofix/widgets/common_widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -326,8 +329,8 @@ class AppEssential {
     );
   }
 
-static  Color generateRandomBlueColor() {
-   Random random = Random();
+  static Color generateRandomBlueColor() {
+    Random random = Random();
     return Color.fromRGBO(
       0, // Red component (set to 0 for shades of blue)
       0, // Green component (set to 0 for shades of blue)
@@ -335,6 +338,35 @@ static  Color generateRandomBlueColor() {
       1.0,
     );
   }
+
+  static getFirstLetters(String input) {
+    List<String> words = input.split(' '); // Split the input string by spaces
+
+    if (words.length == 1) {
+      return words[0]
+          .substring(0, 1); // Return the first letter of the single word
+    } else if (words.length == 2) {
+      // Return the first letters of both words for two words
+      return words[0].substring(0, 1) + words[1].substring(0, 1);
+    } else {
+      // Return the first letters of the first two words for more than two words
+      return words[0].substring(0, 1) + words[1].substring(0, 1);
+    }
+  }
+
+  static String splitFirstTwoWords(String input) {
+    List<String> words = input.split(' ');
+
+    if (words.length == 1) {
+      return words[0]; // Return the single word if only one word is present
+    } else if (words.length >= 2) {
+      // Take the first two words and split them by adding a newline character
+      return '${words[0]}\n${words[1]}';
+    } else {
+      return ''; // Return an empty string for an empty input or no words
+    }
+  }
+
   static void errorLog(dynamic msg, [String name = '']) =>
       log(msg, name, AnsiColors.lightRed);
   static void successLog(dynamic msg, [String name = '']) =>
@@ -347,8 +379,8 @@ static  Color generateRandomBlueColor() {
   ]) {
     var x = msg;
     if (kDebugMode) {
-      // dev.log('\x1b[0m\x1b\x1b[92m$ansiColor[+] $name: ${x.toString()}\x1b[0m',
-      //     name: APIEndpoint.buildMode + ' MODE-QUBE-APP', time: DateTime.now());
+      dev.log('\x1b[0m\x1b\x1b[92m$ansiColor[+] $name: ${x.toString()}\x1b[0m',
+          name: APIEndpoint.buildMode + ' MODE-QUBE-APP', time: DateTime.now());
     }
   }
 
@@ -367,10 +399,8 @@ static  Color generateRandomBlueColor() {
   }
 
   static void logOut() {
-    //PrefsDb.prefsBox.clear();
-
-    Get.deleteAll(force: true);
-    //Get.offAllNamed(Routes.login);
+    PrefsDb.prefsBox.clear();
+    Get.until((route) => route.isFirst);
   }
 
   static Future<void> launchStoreUrl() async {

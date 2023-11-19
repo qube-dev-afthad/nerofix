@@ -15,9 +15,9 @@ net.touchcapture.qr.flutterqr.qr_code_scanner-jetified-lifecycle-process-2.4.0-1
 net.touchcapture.qr.flutterqr.qr_code_scanner-jetified-window-1.0.0-beta04-14 /Users/muhammedafthad/.gradle/caches/transforms-3/dee59bb480020f42d53c2ea15e4501f7/transformed/jetified-window-1.0.0-beta04/res
 net.touchcapture.qr.flutterqr.qr_code_scanner-main-15 /Users/muhammedafthad/.pub-cache/hosted/pub.dev/qr_code_scanner-1.0.1/android/src/main/res
 net.touchcapture.qr.flutterqr.qr_code_scanner-release-16 /Users/muhammedafthad/.pub-cache/hosted/pub.dev/qr_code_scanner-1.0.1/android/src/release/res
-net.touchcapture.qr.flutterqr.qr_code_scanner-pngs-17 /Users/muhammedafthad/NEROFIX/nerofix/build/qr_code_scanner/generated/res/pngs/release
-net.touchcapture.qr.flutterqr.qr_code_scanner-resValues-18 /Users/muhammedafthad/NEROFIX/nerofix/build/qr_code_scanner/generated/res/resValues/release
-net.touchcapture.qr.flutterqr.qr_code_scanner-rs-19 /Users/muhammedafthad/NEROFIX/nerofix/build/qr_code_scanner/generated/res/rs/release
-net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-20 /Users/muhammedafthad/NEROFIX/nerofix/build/qr_code_scanner/intermediates/incremental/release/mergeReleaseResources/merged.dir
-net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-21 /Users/muhammedafthad/NEROFIX/nerofix/build/qr_code_scanner/intermediates/incremental/release/mergeReleaseResources/stripped.dir
-net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-22 /Users/muhammedafthad/NEROFIX/nerofix/build/qr_code_scanner/intermediates/merged_res/release
+net.touchcapture.qr.flutterqr.qr_code_scanner-pngs-17 /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/generated/res/pngs/release
+net.touchcapture.qr.flutterqr.qr_code_scanner-resValues-18 /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/generated/res/resValues/release
+net.touchcapture.qr.flutterqr.qr_code_scanner-rs-19 /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/generated/res/rs/release
+net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-20 /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/intermediates/incremental/release/mergeReleaseResources/merged.dir
+net.touchcapture.qr.flutterqr.qr_code_scanner-mergeReleaseResources-21 /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+net.touchcapture.qr.flutterqr.qr_code_scanner-merged_res-22 /Users/muhammedafthad/nerofix-1/build/qr_code_scanner/intermediates/merged_res/release

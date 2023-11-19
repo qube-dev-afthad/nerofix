@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nerofix/constants/app_assets.dart';
 import 'package:nerofix/constants/app_colors.dart';
+import 'package:nerofix/controllers/dashboard_controller.dart';
 import 'package:nerofix/utils/app_essentials.dart';
 import 'package:nerofix/widgets/common_gradient.dart';
 import 'package:nerofix/widgets/common_widgets.dart';
 
-class LeaderBoard extends StatelessWidget {
+class LeaderBoard extends GetView<DashboardController> {
   const LeaderBoard({super.key});
 
   @override
@@ -30,22 +31,22 @@ class LeaderBoard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               _crownWidget(
-                  city: 'Mumbai',
-                  name: 'HARISANTH',
-                  points: '292',
+                  city: controller.leaderBoard[1].city.toString(),
+                  name: controller.leaderBoard[1].name.toString(),
+                  points: controller.leaderBoard[1].earningPoint.toString(),
                   type: 'silver'),
               Padding(
                 padding: const EdgeInsets.only(bottom: 100.0),
                 child: _crownWidget(
-                    city: 'Mumbai',
-                    name: 'HARISANTH',
-                    points: '292',
+                    city: controller.leaderBoard[0].city.toString(),
+                    name: controller.leaderBoard[0].name.toString(),
+                    points: controller.leaderBoard[0].earningPoint.toString(),
                     type: 'gold'),
               ),
               _crownWidget(
-                  city: 'Mumbai',
-                  name: 'HARISANTH',
-                  points: '292',
+                  city: controller.leaderBoard[2].city.toString(),
+                  name: controller.leaderBoard[2].name.toString(),
+                  points: controller.leaderBoard[2].earningPoint.toString(),
                   type: 'platinum'),
             ],
           ),
@@ -60,14 +61,12 @@ class LeaderBoard extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  SizedBox(
-                    height: 18,
-                  ),
                   ListView(
                     shrinkWrap: true,
-                    children: userScoresList
+                    children: controller.leaderBoard
                         .map((userScore) => _detailsTile(
-                            name: userScore.name, points: userScore.score))
+                            name: userScore.name,
+                            points: userScore.earningPoint))
                         .toList(),
                   ),
                 ],
@@ -88,24 +87,29 @@ class LeaderBoard extends StatelessWidget {
       padding: const EdgeInsets.all(0.0),
       child: Column(
         children: [
-          if (type == 'gold') _imageContainer(gold, 'HK', 'gold'),
-          if (type == 'silver') _imageContainer(silver, 'HK', 'silver'),
-          if (type == 'platinum') _imageContainer(platinum, 'HK', 'platinum'),
+          if (type == 'gold')
+            _imageContainer(gold, name, 'gold'),
+          if (type == 'silver')
+            _imageContainer(
+                silver, name, 'silver'),
+          if (type == 'platinum')
+            _imageContainer(
+                platinum, name, 'platinum'),
           RegularText(
-            text: '650',
+            text: points,
             color: AppColors.primaryGreen,
             fontSize: 12,
             fontWeight: FontWeight.w700,
           ),
           RegularText(
-            text: 'Harikrishanan\nAnand',
+            text: AppEssential.splitFirstTwoWords(name),
             color: AppColors.lightGray,
             fontSize: 12,
             fontWeight: FontWeight.w700,
           ),
           RegularText(
             color: AppColors.lightGray,
-            text: 'Mumbai',
+            text: city,
             fontSize: 8,
             fontWeight: FontWeight.w400,
           ),
@@ -118,17 +122,17 @@ class LeaderBoard extends StatelessWidget {
     return Container(
       height: type == 'gold' ? 120 : 84,
       width: type == 'gold' ? 120 : 84,
+      decoration:
+          BoxDecoration(image: DecorationImage(image: AssetImage(image))),
       child: Center(
           child: Padding(
         padding: EdgeInsets.only(bottom: type == 'gold' ? 0 : 20),
         child: RegularText(
-          text: text,
+          text:AppEssential.getFirstLetters(text) ,
           fontSize: 22,
           fontWeight: FontWeight.w700,
         ),
       )),
-      decoration:
-          BoxDecoration(image: DecorationImage(image: AssetImage(image))),
     );
   }
 

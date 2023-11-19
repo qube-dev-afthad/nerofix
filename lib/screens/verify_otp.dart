@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nerofix/constants/app_assets.dart';
+import 'package:nerofix/controllers/dashboard_controller.dart';
+import 'package:nerofix/controllers/login_controller.dart';
+import 'package:nerofix/core/prefs.dart';
 import 'package:nerofix/routes/app_routes.dart';
+import 'package:nerofix/utils/app_essentials.dart';
 import 'package:nerofix/widgets/rich_text.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -16,6 +20,8 @@ class VerifyOtp extends StatefulWidget {
 }
 
 class _VerifyOtpState extends State<VerifyOtp> {
+  LoginController controller = Get.find<LoginController>();
+  String? otp;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,13 +38,13 @@ class _VerifyOtpState extends State<VerifyOtp> {
             fontSize: 40,
             fontWeight: FontWeight.w700,
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
-          const RichTextWidget(
+          RichTextWidget(
             alignment: TextAlign.center,
             texts: [
-              TextModel(
+              const TextModel(
                   text: 'Enter 4-digit Code code we have sent to\nat ',
                   style: TextStyle(
                     color: Color(0xCC1C1939),
@@ -47,8 +53,8 @@ class _VerifyOtpState extends State<VerifyOtp> {
                     fontWeight: FontWeight.w400,
                   )),
               TextModel(
-                text: '+0000000000',
-                style: TextStyle(
+                text: "+91${controller.mobileNumber}",
+                style: const TextStyle(
                   color: Color(0xFF0063F7),
                   fontSize: 16,
                   // fontFamily: 'DM Sans',
@@ -59,13 +65,13 @@ class _VerifyOtpState extends State<VerifyOtp> {
             ],
             maxLines: 10,
           ),
-          SizedBox(
+          const SizedBox(
             height: 34,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: PinCodeTextField(
-              length: 6,
+              length: controller.otp.length,
               obscureText: false,
               pinTheme: PinTheme(
                   activeColor: AppColors.lightBlue,
@@ -73,12 +79,20 @@ class _VerifyOtpState extends State<VerifyOtp> {
 
               keyboardType: TextInputType.number,
               animationType: AnimationType.fade,
-              textStyle: TextStyle(color: AppColors.greyText),
-              animationDuration: Duration(milliseconds: 300),
+              textStyle: const TextStyle(color: AppColors.greyText),
+              animationDuration: const Duration(milliseconds: 300),
               // errorAnimationController: errorController, // Pass it here
-              onChanged: (value) {
-                if (value.length == 6) {
-                  Get.toNamed(Routes.home);
+              onChanged: (value) async {
+                AppEssential.errorLog('OTP${controller.otp}');
+                if (value.length == controller.otp.length) {
+                  otp = value;
+                  if (controller.otp == otp) {
+                    PrefsDb.saveMobile(controller.mobileNumber);
+                    Get.put(DashboardController(),permanent: true);
+                    Get.toNamed(Routes.home);
+                  } else {
+                    Get.snackbar('Check your otp', 'Please try again later');
+                  }
                 }
               },
 
