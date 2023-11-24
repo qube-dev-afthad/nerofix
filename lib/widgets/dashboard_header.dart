@@ -93,7 +93,7 @@ class DashboardHeader extends StatelessWidget {
       leading: const SizedBox(
         width: 0,
       ),
-      contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+      contentPadding: EdgeInsets.symmetric(horizontal:20, vertical: 14).copyWith(right: 16),
       title: Row(
         children: [
           RegularText(

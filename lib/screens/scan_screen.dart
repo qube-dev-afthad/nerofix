@@ -35,7 +35,6 @@ class _ScanCouponState extends State<ScanCoupon> {
               child: Stack(
                 alignment: Alignment.center,
                 children: <Widget>[
-                  
                   Positioned(
                     bottom: 450,
                     child: SizedBox(
@@ -70,6 +69,14 @@ class _ScanCouponState extends State<ScanCoupon> {
                       bottom: 369,
                       child: RegularText(
                         text: 'Scan coupon QR code',
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      )),
+                  Positioned(
+                      bottom: 220,
+                      child: RegularText(
+                        text: 'OR',
                         color: Colors.white,
                         fontSize: 16,
                         fontWeight: FontWeight.w700,
@@ -119,11 +126,11 @@ class _ScanCouponState extends State<ScanCoupon> {
     scanController.qrViewController = controller;
     controller.scannedDataStream.listen((scanData) async {
       lastScanData = scanData.code;
-     // if (scanData.format == BarcodeFormat.code128) {
-        scanController.data.value = scanData.code!;
-        controller.pauseCamera();
-        await scanController.extractData();
-     // }
+      // if (scanData.format == BarcodeFormat.code128) {
+      scanController.data.value = scanData.code!;
+      controller.pauseCamera();
+      await scanController.extractData();
+      // }
     });
   }
 

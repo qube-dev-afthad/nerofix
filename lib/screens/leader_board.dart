@@ -106,7 +106,7 @@ class LeaderBoard extends GetView<DashboardController> {
           ),
           RegularText(
             color: AppColors.lightGray,
-            text: city,
+            text: city.capitalize!,
             fontSize: 8,
             fontWeight: FontWeight.w400,
           ),

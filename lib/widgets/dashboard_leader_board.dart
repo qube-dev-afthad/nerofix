@@ -43,20 +43,20 @@ class DashboardLeaderBoard extends GetView<DashboardController> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             _crownWidget(
-                city: controller.leaderBoard[1].city.toString(),
+                city: controller.leaderBoard[1].city.toString().capitalize!,
                 name: controller.leaderBoard[1].name.toString(),
                 points: controller.leaderBoard[1].earningPoint.toString(),
                 type: 'silver'),
             Padding(
               padding: const EdgeInsets.only(bottom: 30),
               child: _crownWidget(
-                  city: controller.leaderBoard[0].city.toString(),
+                  city: controller.leaderBoard[0].city.toString().capitalize!,
                   name: controller.leaderBoard[0].name.toString(),
                   points: controller.leaderBoard[0].earningPoint.toString(),
                   type: 'gold'),
             ),
             _crownWidget(
-                city: controller.leaderBoard[2].city.toString(),
+                city: controller.leaderBoard[2].city.toString().capitalize!,
                 name: controller.leaderBoard[2].name.toString(),
                 points: controller.leaderBoard[2].earningPoint.toString(),
                 type: 'platinum'),
@@ -73,7 +73,7 @@ class DashboardLeaderBoard extends GetView<DashboardController> {
       required String city}) {
     return Container(
       width: 100,
-      height: 160,
+      height:type == 'gold'? 160:150,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: AppColors.leaderBoardCardColor,
@@ -82,6 +82,8 @@ class DashboardLeaderBoard extends GetView<DashboardController> {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
+            if(type != 'gold')
+            const SizedBox(height: 15),
             if (type == 'gold')
               _imageContainer(gold, name, 'gold'),
             if (type == 'silver')
@@ -102,7 +104,7 @@ class DashboardLeaderBoard extends GetView<DashboardController> {
               fontWeight: FontWeight.w700,
             ),
             RegularText(
-              text: city,
+              text: city.capitalize!,
               fontSize: 8,
               fontWeight: FontWeight.w400,
             ),

@@ -26,40 +26,62 @@ class DelearsList extends GetView<DelearsListController> {
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                     ),
-                    const Icon(
-                      size: 14,
-                      Icons.location_on_outlined,
-                    ),
-                    RegularText(
-                      text: controller.isLocationLoaded.value
-                          ? controller.city!
-                          : "Fetching location..",
-                      fontSize: 15,
-                      fontWeight: FontWeight.w500,
+                    
+                         const Icon(
+                            size: 14,
+                            Icons.location_on_outlined,
+                          ),
+
+                          
+                   
+                    GestureDetector(
+                      onTap: () async{
+                        if (controller.noLocationPermission.value) {
+                         await controller.getLocation();
+                        }
+                      },
+                      child: RegularText(
+                        text: controller.isLocationLoaded.value
+                            ? controller.city!
+                            : controller.noLocationPermission.value
+                                ? "Enable Location"
+                                : "",
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
                     )
                   ],
                 ),
               ),
-              TextButton(
-                onPressed: () {
-                  Get.toNamed(Routes.searchDealer);
-                },
-                child: const RegularText(
-                  text: 'View All',
-                  fontSize: 10,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.greyText2,
-                ),
+              Obx(
+                () => !controller.noLocationPermission.value
+                    ? TextButton(
+                        onPressed: () {
+                          Get.toNamed(Routes.searchDealer);
+                        },
+                        child: const RegularText(
+                          text: 'View All',
+                          fontSize: 10,
+                          fontWeight: FontWeight.w400,
+                          color: AppColors.greyText2,
+                        ),
+                      )
+                    : SizedBox(),
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20).copyWith(left: 0),
-            child: const DelearsCard(
-              address:
-                  'Lal Bahadur Shastri Marg, Battipada, Bhandup West, Mumbai, Maharashtra 400078',
-              name: 'Kansai Nerolac Paints Ltd.',
-            ),
+          Obx(
+            () => !controller.noLocationPermission.value
+                ? Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20)
+                        .copyWith(left: 0),
+                    child: const DelearsCard(
+                      address:
+                          'Lal Bahadur Shastri Marg, Battipada, Bhandup West, Mumbai, Maharashtra 400078',
+                      name: 'Kansai Nerolac Paints Ltd.',
+                    ),
+                  )
+                : SizedBox(),
           )
         ],
       ),

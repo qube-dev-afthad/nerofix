@@ -11,6 +11,7 @@ import 'package:nerofix/widgets/dealers_list_widget.dart';
 import 'package:nerofix/widgets/primary_button.dart';
 import 'package:nerofix/widgets/shimmer.dart';
 import 'package:nerofix/widgets/vedio_list.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Dashboard extends GetView<DashboardController> {
   const Dashboard({super.key});
@@ -116,8 +117,11 @@ class Dashboard extends GetView<DashboardController> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
-            onTap: ((value) {
-              if (value == 1) {}
+            onTap: ((value) async{
+              if (value == 2) {
+                launch('tel:' + '022 4893 1731');
+               //await AppEssential.makePhoneCall('tel:022 4893 1731');
+              }
             }),
             unselectedFontSize: 12,
             selectedFontSize: 12,

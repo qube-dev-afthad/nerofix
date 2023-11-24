@@ -14,6 +14,7 @@ class DelearsListController extends GetxController {
     super.onInit();
   }
 
+  RxBool noLocationPermission = false.obs;
   Future<void> getLocation() async {
     try {
       PermissionStatus status = await Permission.location.request();
@@ -33,8 +34,12 @@ class DelearsListController extends GetxController {
         city = firstPlacemark.locality ?? 'NA';
 
         isLocationLoaded.value = true;
+        noLocationPermission.value = false;
       } else if (status.isDenied) {
-      } else if (status.isPermanentlyDenied) {}
+        noLocationPermission.value = true;
+      } else if (status.isPermanentlyDenied) {
+        noLocationPermission.value = true;
+      }
     } catch (e) {
       AppEssential.errorLog(e);
     }
