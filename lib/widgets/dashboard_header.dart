@@ -3,7 +3,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nerofix/constants/app_assets.dart';
-import 'package:nerofix/constants/app_colors.dart';
 import 'package:nerofix/utils/app_essentials.dart';
 import 'package:nerofix/widgets/common_widgets.dart';
 
@@ -28,11 +27,18 @@ class DashboardHeader extends StatelessWidget {
         Container(
           height: 300,
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-            begin: Alignment(0.00, -1.00),
-            end: Alignment(0, 1),
-            colors: getMemberConfig(memberType).gradients,
-          )),
+              image: DecorationImage(
+                  image: AssetImage(
+                    getMemberConfig(memberType).backGroundImage,
+                  ),
+                  fit: BoxFit.fill)
+              //     gradient: LinearGradient(
+              //   begin: Alignment(0.00, -1.00),
+              //   end: Alignment(0, 1),
+              //   colors: getMemberConfig(memberType).gradients,
+              // )
+
+              ),
           child: Stack(
             children: [
               Positioned(
@@ -79,74 +85,89 @@ class DashboardHeader extends StatelessWidget {
   }
 
   Widget _pointCard() {
-    return Container(
-      decoration: BoxDecoration(color: AppColors.bannerBlack),
-      child: ListTile(
-        onTap: onTap,
-        minLeadingWidth: 0,
-        horizontalTitleGap: 0,
-        leading: const SizedBox(
-          width: 0,
-        ),
-        contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-        title: Row(
-          children: [
-            RegularText(
-              text: AppEssential.parseCurrency(points, withoutLeading: true)
-                  .toString(),
-              textAlign: TextAlign.start,
-              color: Colors.white,
-              fontSize: 40,
-              fontWeight: FontWeight.w700,
-            ),
-            SizedBox(
-              width: 10,
-            ),
-            RegularText(
-              text: 'POINTS \nAVAILABLE',
-              color: Colors.white.withOpacity(.7),
-              fontSize: 16,
-              textAlign: TextAlign.start,
-              fontWeight: FontWeight.w500,
-            ),
-          ],
-        ),
-        trailing: !hideTrailing
-            ? RegularText(
-                text: 'View points',
-                fontWeight: FontWeight.w500,
-                fontSize: 10,
-                color: Colors.white.withOpacity(.8),
-              )
-            : SizedBox(),
+    return ListTile(
+      tileColor: getMemberConfig(memberType).bottomColor,
+      onTap: onTap,
+      minLeadingWidth: 0,
+      horizontalTitleGap: 0,
+      leading: const SizedBox(
+        width: 0,
       ),
+      contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+      title: Row(
+        children: [
+          RegularText(
+            text: AppEssential.parseCurrency(points, withoutLeading: true)
+                .toString(),
+            textAlign: TextAlign.start,
+            color:  getMemberConfig(memberType).bottomTextColor,
+            fontSize: 40,
+            fontWeight: FontWeight.w700,
+          ),
+          SizedBox(
+            width: 10,
+          ),
+          RegularText(
+            text: 'POINTS \nAVAILABLE',
+            color: getMemberConfig(memberType).bottomTextColor,
+            fontSize: 16,
+            textAlign: TextAlign.start,
+            fontWeight: FontWeight.w500,
+          ),
+        ],
+      ),
+      trailing: !hideTrailing
+          ? RegularText(
+              text: 'View points',
+              fontWeight: FontWeight.w500,
+              fontSize: 10,
+              color:getMemberConfig(memberType).bottomTextColor,
+            )
+          : SizedBox(),
     );
   }
 
   MemberType getMemberConfig(String memberType) {
-    switch (memberType) {
+    switch (memberType.toLowerCase()) {
       case 'bronze':
         return MemberType(
+          bottomTextColor: Colors.white,
+            bottomColor: Color(0xFF7A5529),
+            backGroundImage: bronzeBackgound,
             memberBanner: bronzeBanner,
             gradients: [Colors.yellow, Colors.amber]);
       case 'platinum':
         return MemberType(
+            bottomTextColor: Colors.white,
+            bottomColor: Color(0xFF212121),
+            backGroundImage: platinumBannerBg,
             memberBanner: platinumBanner,
             gradients: [Colors.yellow, Colors.amber]);
       case 'gold':
-        return MemberType(memberBanner: goldBanner, gradients: [
-          Color(0xFF818181),
-          Color(0xFFF3E7FD),
-          Color(0x00CCCCCC)
-        ]);
+        return MemberType(
+            bottomTextColor: Colors.white,
+            bottomColor: Color(0xFFBD9233),
+            backGroundImage: goldBackgound,
+            memberBanner: goldBanner,
+            gradients: [
+              Color(0xFF818181),
+              Color(0xFFF3E7FD),
+              Color(0x00CCCCCC)
+            ]);
       case 'silver':
         return MemberType(
+          bottomTextColor: Colors.black,
+            bottomColor: Color(0xFFDADADA),
+            backGroundImage: silverBackgound,
             memberBanner: silverBanner,
             gradients: [Colors.yellow, Colors.amber]);
 
       default:
         return MemberType(
-            memberBanner: bronzeBanner,
+           bottomTextColor: Colors.black,
+            bottomColor: Color(0xFFDADADA),
+            backGroundImage: silverBackgound,
+            memberBanner: silverBanner,
             gradients: [Colors.yellow, Colors.amber]);
     }
   }
@@ -154,10 +175,16 @@ class DashboardHeader extends StatelessWidget {
 
 class MemberType {
   String memberBanner;
+  Color bottomColor;
   List<Color> gradients;
+  String backGroundImage;
+  Color bottomTextColor;
   MemberType({
     required this.memberBanner,
     required this.gradients,
+    required this.bottomTextColor,
+    required this.bottomColor,
+    required this.backGroundImage,
   });
 
   @override

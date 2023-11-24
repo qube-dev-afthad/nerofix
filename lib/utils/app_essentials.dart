@@ -339,33 +339,32 @@ class AppEssential {
     );
   }
 
-  static getFirstLetters(String input) {
-    List<String> words = input.split(' '); // Split the input string by spaces
+  static String getFirstLetters(String input) {
+  Iterable<String> words = input.trim().split(RegExp(r'\s+')).where((word) => word.isNotEmpty);
 
-    if (words.length == 1) {
-      return words[0]
-          .substring(0, 1); // Return the first letter of the single word
-    } else if (words.length == 2) {
-      // Return the first letters of both words for two words
-      return words[0].substring(0, 1) + words[1].substring(0, 1);
-    } else {
-      // Return the first letters of the first two words for more than two words
-      return words[0].substring(0, 1) + words[1].substring(0, 1);
-    }
+  StringBuffer result = StringBuffer();
+
+  for (String word in words) {
+    result.write(word[0]);
   }
+
+  return result.toString();
+}
+
 
   static String splitFirstTwoWords(String input) {
-    List<String> words = input.split(' ');
+  List<String> words = input.trim().split(RegExp(r'\s+')).where((word) => word.isNotEmpty).toList();
 
-    if (words.length == 1) {
-      return words[0]; // Return the single word if only one word is present
-    } else if (words.length >= 2) {
-      // Take the first two words and split them by adding a newline character
-      return '${words[0]}\n${words[1]}';
-    } else {
-      return ''; // Return an empty string for an empty input or no words
-    }
+  if (words.length == 1) {
+    return words[0]; // Return the single word if only one word is present
+  } else if (words.length >= 2) {
+    // Take the first two non-empty words and join them using a newline character
+    return '${words[0]}\n${words[1]}';
+  } else {
+    return ''; // Return an empty string for an empty input or no valid words
   }
+}
+
 
   static void errorLog(dynamic msg, [String name = '']) =>
       log(msg, name, AnsiColors.lightRed);

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.nerofix.app-mergeReleaseResources-23:/values-bs/values-bs.xml",
+            "outputFile": "com.example.nerofix.app-mergeReleaseResources-24:/values-bs/values-bs.xml",
             "map": [
                 {
                     "source": "/Users/muhammedafthad/.gradle/caches/transforms-3/24bd5ae211488322aa8c48f41a7bee4d/transformed/jetified-play-services-base-18.1.0/res/values-bs/values.xml",

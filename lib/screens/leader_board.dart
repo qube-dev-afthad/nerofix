@@ -59,17 +59,14 @@ class LeaderBoard extends GetView<DashboardController> {
                     topRight: Radius.circular(20)),
                 color: AppColors.greyBackground.withOpacity(.9),
               ),
-              child: Column(
-                children: [
-                  ListView(
-                    shrinkWrap: true,
-                    children: controller.leaderBoard
-                        .map((userScore) => _detailsTile(
-                            name: userScore.name,
-                            points: userScore.earningPoint))
-                        .toList(),
-                  ),
-                ],
+              child: ListView(
+                padding: EdgeInsets.only(top: 20),
+                shrinkWrap: true,
+                children: controller.leaderBoard
+                    .map((userScore) => _detailsTile(
+                        name: userScore.name,
+                        points: userScore.earningPoint))
+                    .toList(),
               ),
             ),
           ),

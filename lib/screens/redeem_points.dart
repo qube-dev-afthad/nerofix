@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:nerofix/constants/app_colors.dart';
 import 'package:nerofix/constants/decorations.dart';
+import 'package:nerofix/controllers/dashboard_controller.dart';
 import 'package:nerofix/widgets/common_gradient.dart';
 import 'package:nerofix/widgets/common_widgets.dart';
 import 'package:nerofix/widgets/congrats_dialog.dart';
 import 'package:nerofix/widgets/primary_button.dart';
 import 'package:nerofix/widgets/transaction_history.dart';
 
-class RedeemPoints extends StatefulWidget {
+class RedeemPoints extends GetView<DashboardController> {
   const RedeemPoints({super.key});
 
-  @override
-  State<RedeemPoints> createState() => _RedeemPointsState();
-}
-
-class _RedeemPointsState extends State<RedeemPoints> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,26 +71,32 @@ class _RedeemPointsState extends State<RedeemPoints> {
                     ),
                     child: Padding(
                       padding: const EdgeInsets.only(top: 30),
-                      child: TransactionHistory(
-                        data: [
-                          TransactionHistoryData(
-                              amount: '100',
-                              date: '2023-01-01',
-                              status: 'Completed'),
-                          TransactionHistoryData(
-                              amount: '50',
-                              date: '2023-02-01',
-                              status: 'Pending'),
-                          TransactionHistoryData(
-                              amount: '75',
-                              date: '2023-03-01',
-                              status: 'Completed'),
-                          TransactionHistoryData(
-                              amount: '30',
-                              date: '2023-04-01',
-                              status: 'Pending'),
-                        ],
-                        isAtRedemption: false,
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            TransactionHistory(
+                              data: [
+                                if (controller.transactionHistory.isNotEmpty)
+                                  for (int i = 0;
+                                      i < controller.transactionHistory.length;
+                                      i++)
+                                    TransactionHistoryData(
+                                        amount: controller
+                                            .transactionHistory[i].amount
+                                            .toString(),
+                                        date: DateFormat('dd-MM-yyyy').format(
+                                            controller.transactionHistory[i]
+                                                .redemptionDate),
+                                        status: controller
+                                            .transactionHistory[i].status
+                                            .toString()),
+                              ],
+                              isAtRedemption: false,
+                            ),
+                            if(controller.transactionHistory.isEmpty)
+                           RegularText(text: 'No data found',fontWeight: FontWeight.w300,)
+                          ],
+                        ),
                       ),
                     ),
                   ),

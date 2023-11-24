@@ -5,7 +5,6 @@ import 'package:nerofix/constants/app_assets.dart';
 import 'package:nerofix/constants/app_colors.dart';
 import 'package:nerofix/controllers/dashboard_controller.dart';
 import 'package:nerofix/routes/app_routes.dart';
-import 'package:nerofix/utils/app_essentials.dart';
 import 'package:nerofix/widgets/dashboard_header.dart';
 import 'package:nerofix/widgets/dashboard_leader_board.dart';
 import 'package:nerofix/widgets/dealers_list_widget.dart';
@@ -47,12 +46,12 @@ class Dashboard extends GetView<DashboardController> {
                   const SizedBox(
                     height: 20,
                   ),
-                  PrimaryButtonView(
-                      onPressed: () {
-                        AppEssential.logOut();
-                      },
-                      animationId: 'animationId',
-                      name: 'LOGOTU'),
+                  // PrimaryButtonView(
+                  //     onPressed: () {
+                  //       AppEssential.logOut();
+                  //     },
+                  //     animationId: 'animationId',
+                  //     name: 'LOGOTU'),
                   Obx(
                     () => !controller.isUserBalance.value
                         ? PrimaryButtonView(

@@ -72,7 +72,8 @@ class DashboardLeaderBoard extends GetView<DashboardController> {
       required String type,
       required String city}) {
     return Container(
-      width: 95,
+      width: 100,
+      height: 160,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: AppColors.leaderBoardCardColor,
@@ -113,10 +114,12 @@ class DashboardLeaderBoard extends GetView<DashboardController> {
 
   _imageContainer(String image, String text, String type) {
     return Container(
-      height: 60,
+      height:type == 'gold'?80: 60,
       width: 60,
       decoration:
-          BoxDecoration(image: DecorationImage(image: AssetImage(image))),
+          BoxDecoration(
+          
+            image: DecorationImage(image: AssetImage(image),)),
       child: Center(
           child: Padding(
         padding: EdgeInsets.only(bottom: type == 'gold' ? 0 : 20),

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.nerofix.app-mergeReleaseResources-23:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "com.example.nerofix.app-mergeReleaseResources-24:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "/Users/muhammedafthad/.gradle/caches/transforms-3/6c400c0637cb2fea81e72115a5ff1a4e/transformed/appcompat-1.4.2/res/values-hdpi-v4/values-hdpi-v4.xml",

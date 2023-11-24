@@ -4,7 +4,6 @@ import 'package:nerofix/controllers/button_controller.dart';
 import 'package:nerofix/controllers/login_controller.dart';
 import 'package:nerofix/core/prefs.dart';
 import 'package:nerofix/screens/dashboard.dart';
-import 'package:nerofix/screens/delears_list_screen.dart';
 import 'package:nerofix/screens/leader_board.dart';
 import 'package:nerofix/screens/login.dart';
 import 'package:nerofix/screens/points_history.dart';
@@ -52,10 +51,7 @@ final getPages = [
       name: Routes.searchDealer,
       page: () => const SearchDealer(),
       bindings: []),
-  GetPage(
-      name: Routes.delearsList,
-      page: () => const DealersListScreen(),
-      bindings: []),
+ 
   GetPage(
       name: Routes.scanCoupon, page: () => const ScanCoupon(), bindings: []),
 ];

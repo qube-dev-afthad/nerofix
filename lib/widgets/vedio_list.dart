@@ -60,7 +60,7 @@ class _VideoListState extends State<VideoList> {
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding:
-                      EdgeInsets.only(right: 10, left: index == 0 ? 0 : 0),
+                    EdgeInsets.only(right: 10, left: index == 0 ? 0 : 0),
                   child: InkWell(
                       onTap: () {
                         showDialog(

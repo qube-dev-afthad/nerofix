@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nerofix/constants/app_colors.dart';
-import 'package:nerofix/routes/app_routes.dart';
+import 'package:nerofix/controllers/dashboard_controller.dart';
+import 'package:nerofix/screens/delears_list_screen.dart';
 import 'package:nerofix/widgets/common_widgets.dart';
 import 'package:nerofix/widgets/dealers_card.dart';
 import 'package:nerofix/widgets/primary_button.dart';
@@ -29,73 +30,17 @@ class _SearchDealerState extends State<SearchDealer> {
     ),
     // Add more DealersCard instances as needed
   ];
-  String selectedCity = 'Vijayawada';
-  String selectedState = 'Andhra Pradesh';
-
-  List<String> indianStates = [
-    'Andhra Pradesh',
-    'Arunachal Pradesh',
-    'Assam',
-    'Bihar',
-    'Chhattisgarh',
-    'Goa',
-    'Gujarat',
-    'Haryana',
-    'Himachal Pradesh',
-    'Jharkhand',
-    'Karnataka',
-    'Kerala',
-    'Madhya Pradesh',
-    'Maharashtra',
-    'Manipur',
-    'Meghalaya',
-    'Mizoram',
-    'Nagaland',
-    'Odisha',
-    'Punjab',
-    'Rajasthan',
-    'Sikkim',
-    'Tamil Nadu',
-    'Telangana',
-    'Tripura',
-    'Uttar Pradesh',
-    'Uttarakhand',
-    'West Bengal',
-  ];
-
-  Map<String, List<String>> indianCities = {
-    'Andhra Pradesh': ['Vijayawada', 'Visakhapatnam', 'Guntur'],
-    'Arunachal Pradesh': ['Itanagar', 'Naharlagun', 'Tawang'],
-    'Assam': ['Guwahati', 'Jorhat', 'Silchar'],
-    'Bihar': ['Patna', 'Gaya', 'Muzaffarpur'],
-    'Chhattisgarh': ['Raipur', 'Bhilai', 'Bilaspur'],
-    'Goa': ['Panaji', 'Vasco da Gama', 'Margao'],
-    'Gujarat': ['Ahmedabad', 'Surat', 'Vadodara'],
-    'Haryana': ['Chandigarh', 'Faridabad', 'Gurgaon'],
-    'Himachal Pradesh': ['Shimla', 'Manali', 'Dharamshala'],
-    'Jharkhand': ['Ranchi', 'Jamshedpur', 'Dhanbad'],
-    'Karnataka': ['Bangalore', 'Mysore', 'Hubli'],
-    'Kerala': ['Thiruvananthapuram', 'Kochi', 'Kozhikode'],
-    'Madhya Pradesh': ['Bhopal', 'Indore', 'Jabalpur'],
-    'Maharashtra': ['Mumbai', 'Pune', 'Nagpur'],
-    'Manipur': ['Imphal', 'Thoubal', 'Bishnupur'],
-    'Meghalaya': ['Shillong', 'Tura', 'Jowai'],
-    'Mizoram': ['Aizawl', 'Lunglei', 'Champhai'],
-    'Nagaland': ['Kohima', 'Dimapur', 'Mokokchung'],
-    'Odisha': ['Bhubaneswar', 'Cuttack', 'Rourkela'],
-    'Punjab': ['Chandigarh', 'Amritsar', 'Ludhiana'],
-    'Rajasthan': ['Jaipur', 'Jodhpur', 'Udaipur'],
-    'Sikkim': ['Gangtok', 'Namchi', 'Mangan'],
-    'Tamil Nadu': ['Chennai', 'Coimbatore', 'Madurai'],
-    'Telangana': ['Hyderabad', 'Warangal', 'Nizamabad'],
-    'Tripura': ['Agartala', 'Udaipur', 'Dharmanagar'],
-    'Uttar Pradesh': ['Lucknow', 'Kanpur', 'Varanasi'],
-    'Uttarakhand': ['Dehradun', 'Haridwar', 'Rishikesh'],
-    'West Bengal': ['Kolkata', 'Howrah', 'Durgapur'],
-  };
+  String selectedCity = '';
+  String selectedState = '';
 
   List<String> cities = [];
+  @override
+  void initState() {
+    controller.getStates();
+    super.initState();
+  }
 
+  DashboardController controller = Get.find<DashboardController>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -217,7 +162,12 @@ class _SearchDealerState extends State<SearchDealer> {
           PrimaryButtonView(
             animationId: 'animationId',
             onPressed: () {
-              Get.toNamed(Routes.delearsList);
+              if (selectedCity.isNotEmpty && selectedState.isNotEmpty) {
+                Get.to(DealersListScreen(
+                    city: selectedCity, state: selectedState));
+              } else {
+                Get.snackbar('Try again', 'Select city and state ');
+              }
             },
             name: 'Submit',
             textColor: Colors.black,
@@ -254,14 +204,15 @@ class _SearchDealerState extends State<SearchDealer> {
             itemExtent: 32,
             onSelectedItemChanged: (int index) {
               setState(() {
-                selectedState = indianStates[index];
-                cities = indianCities[selectedState]!;
-                selectedCity = cities[0];
+                selectedState = controller.states[index].state;
+                controller.getCitiesByState(selectedState);
+                // cities = indianCities[selectedState]!;
+                // selectedCity = cities[0];
               });
             },
-            children: indianStates.map((state) {
+            children: controller.states.map((s) {
               return Center(
-                child: Text(state),
+                child: Text(s.state),
               );
             }).toList(),
           ),
@@ -280,12 +231,12 @@ class _SearchDealerState extends State<SearchDealer> {
             itemExtent: 32,
             onSelectedItemChanged: (int index) {
               setState(() {
-                selectedCity = cities[index];
+                selectedCity = controller.cities[index].city;
               });
             },
-            children: cities.map((city) {
+            children: controller.cities.map((city) {
               return Center(
-                child: Text(city),
+                child: Text(city.city),
               );
             }).toList(),
           ),

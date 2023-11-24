@@ -19,3 +19,6 @@ const String scanBg = 'assets/images/scan_bg.png';
 const String scanBd = 'assets/images/scan_bd.png';
 const String carpenter = 'assets/images/carpenter.png';
 const String youtube = 'assets/images/youtube.png';
+const String goldBackgound = 'assets/images/gold_banner_bg.png';
+const String silverBackgound = 'assets/images/silver_banner_bg.png';
+const String bronzeBackgound = 'assets/images/bronze_banner_bg.png';

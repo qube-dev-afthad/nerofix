@@ -49,7 +49,7 @@ class DelearsCard extends StatelessWidget {
                 height: 14,
               ),
               RegularText(
-                text: address.toUpperCase(),
+                text: address,
                 textAlign: TextAlign.start,
                 color: Colors.white,
                 fontWeight: FontWeight.w500,

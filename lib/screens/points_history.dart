@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:nerofix/constants/app_assets.dart';
 import 'package:nerofix/constants/app_colors.dart';
 import 'package:nerofix/controllers/dashboard_controller.dart';
 import 'package:nerofix/widgets/common_widgets.dart';
 import 'package:nerofix/widgets/dashboard_header.dart';
+import 'package:nerofix/widgets/shimmer.dart';
 import 'package:nerofix/widgets/transaction_history.dart';
 
 class PointsHistory extends GetView<DashboardController> {
@@ -27,34 +29,47 @@ class PointsHistory extends GetView<DashboardController> {
                 SizedBox(
                   height: 24,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      _pointsBriefCard(
-                          url: pills, points: '333', label: 'Total Points \nEarned'),
-                      _pointsBriefCard(
-                          url: gift, points: '333', label: 'Total Points Redeemed'),
-                    ],
-                  ),
+                Obx(
+                  () => 
+!controller.isLoadingTotalPoints.value?
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        _pointsBriefCard(
+                            url: pills,
+                            points: controller.totalPoints.first.totalPointsEarned.toString(),
+                            label: 'Total Points \nEarned'),
+                        _pointsBriefCard(
+                            url: gift,
+                            points: controller.totalPoints.first.totalPointsRedeemed.toString(),
+                            label: 'Total Points Redeemed'),
+                      ],
+                    ),
+                  ):ShimmerWidget.textShimmer(Get.width-40,100),
                 ),
                 SizedBox(
                   height: 24,
                 ),
                 TransactionHistory(
                   data: [
-                    TransactionHistoryData(
-                        amount: '100', date: '2023-01-01', status: 'Completed'),
-                    TransactionHistoryData(
-                        amount: '50', date: '2023-02-01', status: 'Pending'),
-                    TransactionHistoryData(
-                        amount: '75', date: '2023-03-01', status: 'Completed'),
-                    TransactionHistoryData(
-                        amount: '30', date: '2023-04-01', status: 'Pending'),
+                    if (controller.transactionHistory.isNotEmpty)
+                      for (int i = 0;
+                          i < controller.transactionHistory.length;
+                          i++)
+                        TransactionHistoryData(
+                            amount: controller.transactionHistory[i].amount
+                                .toString(),
+                            date: DateFormat('dd-MM-yyyy').format(controller
+                                .transactionHistory[i].redemptionDate),
+                            status: controller.transactionHistory[i].status
+                                .toString()),
                   ],
                   isAtRedemption: false,
                 ),
+                 if(controller.transactionHistory.isEmpty)
+                            RegularText(text: 'No data found',fontWeight: FontWeight.w300,)
               ],
             )
           ]),
@@ -66,7 +81,7 @@ class PointsHistory extends GetView<DashboardController> {
   Widget _pointsBriefCard(
       {required String url, required String points, required String label}) {
     return Container(
-      width: 155,
+      width: Get.width/2.3,
       decoration: BoxDecoration(
           color: AppColors.lightGray, borderRadius: BorderRadius.circular(10)),
       child: Padding(

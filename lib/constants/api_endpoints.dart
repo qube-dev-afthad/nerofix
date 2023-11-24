@@ -41,12 +41,17 @@ class APIEndpoint {
   static const String checkLogin = 'CheckLogin';
   static const String otpForLogin = 'OtpForLogin';
   static const String getBalance = 'GetBalance';
-  static const String getLeaderboard = 'GetLeaderboard';
+  static const String getLeaderboard = 'GetTopTenEarningPoint';
   static const String dealerSearch = 'DealerSearch';
   static const String getYoutubeVideos = 'GetYoutubevideos';
   static const String registrationRequest = 'RegistrationRequest';
   static const String getStates = 'GetStates';
-  static const String getCityByStates = 'GetCityByStates';
+  static const String getCityByStates = 'GetCityBystates';
   static const String checkCoupons = 'CheckCoupons';
   static const String redemptionRequest = 'RedemptionRequest';
+  static const String transactionHistory= 'Transaction_history';
+    static const String userTotalPoints= 'UserTotalPoints';
+    
+  
+  
 }
